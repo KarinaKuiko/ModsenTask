@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/modsen
+    username: postgres
+    password: 12345
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties.hibernate:
+      batch_size: 50
+      fetch_size: 50
+      show_sql: true
+      format_sql: true
+      hbm2ddl.auto: validate
+    open-in-view: false
+  liquibase:
+    url: jdbc:postgresql://localhost:5432/modsen
+    user: postgres
+    password: 12345
+    driver-class-name: org.postgresql.Driver
+
+app:
+  library-scheduler:
+    interval: 1d
